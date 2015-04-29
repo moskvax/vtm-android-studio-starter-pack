@@ -18,6 +18,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {
+        exclude 'META-INF/services/org.jeo.data.Driver'
+    }
 }
 idea {
     module {
@@ -28,7 +31,10 @@ idea {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.noveogroup.android:android-logger:1.3.4'
     compile 'org.oscim:vtm:0.6.0-SNAPSHOT'
+    compile 'org.oscim:vtm-jeo:0.6.0-SNAPSHOT'
+    compile 'org.oscim:vtm-extras:0.6.0-SNAPSHOT'
     compile 'org.oscim:vtm-themes:0.6.0-SNAPSHOT'
     compile 'org.oscim:vtm-android:0.6.0-SNAPSHOT@aar'
 }

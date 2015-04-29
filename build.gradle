@@ -14,9 +14,9 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'https://github.com/opensciencemap/maven-repo/raw/master' }
         jcenter()
         mavenLocal()
         mavenCentral()
-        maven { url 'https://github.com/opensciencemap/maven-repo/raw/master/' }
     }
 }
